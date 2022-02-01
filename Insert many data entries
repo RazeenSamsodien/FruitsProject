@@ -1,0 +1,23 @@
+const kiwi = new Fruit ({
+  name: "Kiwi",
+  rating: 10,
+  review: "The best fruit."
+});
+
+const orange = new Fruit ({
+  name: "Orange",
+  rating: 4,
+  review: "Too sour for me."
+});
+
+const banana = new Fruit ({
+  name: "Banana",
+  rating: 3,
+  review: "Weird texture."
+});
+
+Fruit.insertMany([kiwi, orange, banana], function(err) {
+  if (err) {
+    console.log(err);
+  } else console.log("Success!");
+});
